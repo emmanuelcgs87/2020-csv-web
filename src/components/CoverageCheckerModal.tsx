@@ -40,7 +40,7 @@ export const CoverageCheckerModal: React.FC<CoverageCheckerModalProps> = ({
               Obras Sociales y Prepagas
             </h3>
             <p className="text-xs text-slate-300">
-              Consultá los requisitos para tu plan en 2020 Oftalmología
+              Consultá los requisitos para tu plan en 2020 Centro de Salud Visual
             </p>
           </div>
 

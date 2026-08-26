@@ -8,7 +8,7 @@ interface CtaSectionProps {
 
 export const CtaSection: React.FC<CtaSectionProps> = ({ onOpenBooking }) => {
   const whatsappUrl = `https://wa.me/${CLINIC_INFO.whatsapp.replace('+', '')}?text=${encodeURIComponent(
-    'Hola! Quisiera solicitar un turno en 2020 Oftalmología.'
+    'Hola! Quisiera solicitar un turno en 2020 Centro de Salud Visual.'
   )}`;
 
   return (

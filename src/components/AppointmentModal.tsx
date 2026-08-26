@@ -59,7 +59,7 @@ export const AppointmentModal: React.FC<AppointmentModalProps> = ({
     if (step > 1) setStep((prev) => (prev - 1) as any);
   };
 
-  const whatsappMessage = `*Solicitud de Turno - 2020 Oftalmología*\n\n` +
+  const whatsappMessage = `*Solicitud de Turno - 2020 Centro de Salud Visual*\n\n` +
     `👤 *Paciente:* ${booking.patientName}\n` +
     `📄 *DNI:* ${booking.patientDni}\n` +
     `🏥 *Sede:* ${booking.branch}\n` +
@@ -84,7 +84,7 @@ export const AppointmentModal: React.FC<AppointmentModalProps> = ({
         <div className="bg-slate-900 text-white p-6 sm:p-7 flex items-center justify-between relative">
           <div className="space-y-1">
             <span className="text-xs text-sky-400 font-bold uppercase tracking-wider">
-              2020 Oftalmología · Portal de Turnos
+              2020 Centro de Salud Visual · Portal de Turnos
             </span>
             <h3 className="text-xl sm:text-2xl font-bold font-['Outfit']">
               {step === 4 ? '¡Turno Solicitado!' : 'Solicitar Turno Médico'}

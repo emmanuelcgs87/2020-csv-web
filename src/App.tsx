@@ -54,7 +54,7 @@ export default function App() {
   };
 
   const whatsappDirectUrl = `https://wa.me/${CLINIC_INFO.whatsapp.replace('+', '')}?text=${encodeURIComponent(
-    'Hola! Quisiera realizar una consulta en 2020 Oftalmología.'
+    'Hola! Quisiera realizar una consulta en 2020 Centro de Salud Visual.'
   )}`;
 
   return (

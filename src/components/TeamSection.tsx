@@ -43,7 +43,8 @@ export const TeamSection: React.FC<TeamSectionProps> = ({ onSelectDoctor, onBook
               >
                 <img
                   src={doctor.image}
-                  alt={`${doctor.name} - ${doctor.specialty} en 2020 Oftalmología`}
+                  alt={`${doctor.name} - ${doctor.specialty} en 2020 Centro de Salud Visual`}
+                  referrerPolicy="no-referrer"
                   className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">

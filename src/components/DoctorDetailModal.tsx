@@ -24,7 +24,7 @@ export const DoctorDetailModal: React.FC<DoctorDetailModalProps> = ({
           <div className="flex items-center gap-2">
             <Stethoscope className="w-5 h-5 text-sky-400" />
             <span className="text-xs font-bold uppercase tracking-wider text-sky-400">
-              Equipo Médico · 2020 Oftalmología
+              Equipo Médico · 2020 Centro de Salud Visual
             </span>
           </div>
           <button
@@ -43,6 +43,7 @@ export const DoctorDetailModal: React.FC<DoctorDetailModalProps> = ({
             <img
               src={doctor.image}
               alt={doctor.name}
+              referrerPolicy="no-referrer"
               className="w-28 h-28 sm:w-32 sm:h-32 rounded-2xl object-cover shadow-md border-2 border-sky-100"
             />
             <div className="text-center sm:text-left space-y-1">

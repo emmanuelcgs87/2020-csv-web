@@ -28,7 +28,7 @@ export const HighlightFeatures: React.FC<HighlightFeaturesProps> = ({
 
           <h2 className="text-2xl sm:text-4xl lg:text-[40px] font-extrabold text-slate-900 tracking-tight leading-tight font-['Outfit']">
             Resolución completa en{' '}
-            <span className="text-sky-600 font-extrabold underline decoration-sky-300 decoration-wavy underline-offset-4">
+            <span className="text-sky-600 font-extrabold">
               una sola consulta
             </span>
             . Diagnóstico por imágenes y alternativas terapéuticas.

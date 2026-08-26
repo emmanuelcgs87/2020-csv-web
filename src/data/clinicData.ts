@@ -1,8 +1,8 @@
 import { Doctor, Specialty, ObraSocial, Branch } from '../types';
 
 export const CLINIC_INFO = {
-  name: "2020 Oftalmología",
-  legalName: "2020 Oftalmología S.R.L.",
+  name: "2020 Centro de Salud Visual",
+  legalName: "2020 Centro de Salud Visual",
   slogan: "Cuidamos tu visión con diagnóstico preciso y tratamiento adecuado.",
   description: "Clínica oftalmológica de alta complejidad en Bahía Blanca y Monte Hermoso. Diagnóstico por imágenes, cirugías ambulatorias y guardia oftalmológica.",
   phone: "(0291) 407-3618",
@@ -10,7 +10,7 @@ export const CLINIC_INFO = {
   whatsappDisplay: "+54 9 291 407-3618",
   email: "turnos@2020oftalmologia.com.ar",
   emergencyPhone: "(0291) 154-073618",
-  instagram: "https://instagram.com/2020oftalmologia",
+  instagram: "https://www.instagram.com/2020csvisual/",
   hoursWeekdays: "Lunes a Viernes: 8:00 a 20:00 hs",
   hoursSaturday: "Sábados: 10:00 a 14:00 hs",
   guardia24: "Guardia activa y pasiva 24 horas",
@@ -62,8 +62,8 @@ export const DOCTORS: Doctor[] = [
     sede: "Bahía Blanca y Monte Hermoso"
   },
   {
-    id: "dr-emanuel-rodriguez",
-    name: "Dr. Emanuel Rodríguez",
+    id: "dr-emmanuel-rodriguez",
+    name: "Dr. Emmanuel Rodríguez",
     role: "Médico Especialista",
     specialty: "Oftalmología General & Ojo Seco",
     subspecialties: ["Tratamiento Integral de Ojo Seco", "Diagnóstico por Imágenes", "Topografía Corneal", "Control Preventivo"],
@@ -130,8 +130,8 @@ export const DOCTORS: Doctor[] = [
     sede: "Bahía Blanca y Monte Hermoso"
   },
   {
-    id: "dra-angelica-florez-bravo",
-    name: "Dra. Angélica Florez Bravo",
+    id: "dra-angelica-florez-blanco",
+    name: "Dra. Angélica Florez Blanco",
     role: "Médica Especialista",
     specialty: "Oftalmología General & Oftalmopediatría",
     subspecialties: ["Salud Visual Pediátrica", "Estrabismo y Ambliopía (Ojo Vago)", "Fondo de Ojo en Recién Nacidos", "Control Escolar Visual"],

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { Eye, Phone, Calendar, Menu, X, ArrowRight, AlertCircle, Clock, MapPin } from 'lucide-react';
+import { Eye, Calendar, Menu, X, ArrowRight, AlertCircle, Clock, MapPin } from 'lucide-react';
 import { CLINIC_INFO } from '../data/clinicData';
+import { Logo } from './Logo';
 
 interface HeaderProps {
   onOpenBooking: (doctorName?: string, specialtyId?: string) => void;
@@ -47,23 +48,13 @@ export const Header: React.FC<HeaderProps> = ({
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
-          {/* Logo */}
+          {/* Logo 2020 Centro de Salud Visual */}
           <a
             href="#"
             id="header-logo-link"
-            className="flex items-center gap-2.5 group focus:outline-none focus:ring-2 focus:ring-sky-400 rounded-lg p-1"
+            className="flex items-center group focus:outline-none focus:ring-2 focus:ring-sky-400 rounded-lg p-1 transition-transform hover:scale-[1.02]"
           >
-            <div className="w-10 h-10 rounded-full bg-gradient-to-tr from-sky-600 to-cyan-400 flex items-center justify-center shadow-md shadow-sky-500/20 group-hover:scale-105 transition-transform">
-              <Eye className="w-5 h-5 text-white" />
-            </div>
-            <div className="flex flex-col">
-              <span className="text-xl font-bold tracking-tight text-white flex items-center gap-1.5 font-['Outfit']">
-                2020 <span className="font-light text-slate-200">Oftalmología</span>
-              </span>
-              <span className="text-[10px] tracking-wider uppercase text-sky-400 font-semibold -mt-1 hidden sm:block">
-                Bahía Blanca · Monte Hermoso
-              </span>
-            </div>
+            <Logo variant="light" size="md" showSubtitle={true} />
           </a>
 
           {/* Desktop Navigation Links */}
@@ -101,18 +92,8 @@ export const Header: React.FC<HeaderProps> = ({
             </button>
           </nav>
 
-          {/* Actions: Phone & Pedir Turno */}
+          {/* Actions: Pedir Turno (Phone removed as requested) */}
           <div className="hidden sm:flex items-center gap-3">
-            <a
-              href={`tel:${CLINIC_INFO.phone}`}
-              id="header-phone-link"
-              className="hidden xl:flex items-center gap-1.5 text-xs font-semibold text-slate-300 hover:text-white bg-slate-800/80 hover:bg-slate-700/80 px-3 py-2 rounded-full border border-slate-700 transition"
-              title="Llamar a recepción"
-            >
-              <Phone className="w-3.5 h-3.5 text-sky-400" />
-              <span>(0291) 407-3618</span>
-            </a>
-
             <button
               onClick={() => onOpenBooking()}
               id="header-cta-pedir-turno"

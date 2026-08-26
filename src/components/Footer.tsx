@@ -1,6 +1,7 @@
 import React from 'react';
-import { Eye, MapPin, Phone, Mail, Instagram, Clock, ShieldCheck, Heart } from 'lucide-react';
+import { MapPin, Phone, Mail, Instagram, Clock, ShieldCheck, Heart } from 'lucide-react';
 import { CLINIC_INFO } from '../data/clinicData';
+import { Logo } from './Logo';
 
 interface FooterProps {
   onOpenBooking: () => void;
@@ -24,13 +25,8 @@ export const Footer: React.FC<FooterProps> = ({
           
           {/* Column 1: Brand & Mission */}
           <div className="lg:col-span-4 space-y-4">
-            <div className="flex items-center gap-2.5">
-              <div className="w-10 h-10 rounded-full bg-sky-600 flex items-center justify-center text-white shadow-md">
-                <Eye className="w-5 h-5" />
-              </div>
-              <span className="text-xl font-bold tracking-tight text-white font-['Outfit']">
-                2020 <span className="font-light text-slate-300">Oftalmología</span>
-              </span>
+            <div className="flex items-center">
+              <Logo variant="light" size="lg" />
             </div>
 
             <p className="text-xs sm:text-sm text-slate-300 leading-relaxed max-w-sm">
@@ -42,12 +38,19 @@ export const Footer: React.FC<FooterProps> = ({
                 href={CLINIC_INFO.instagram}
                 target="_blank"
                 rel="noreferrer"
-                aria-label="Instagram de 2020 Oftalmología"
-                className="w-9 h-9 rounded-full bg-slate-800 hover:bg-sky-600 text-slate-300 hover:text-white flex items-center justify-center transition"
+                aria-label="Instagram de 2020 Centro de Salud Visual"
+                className="w-9 h-9 rounded-full bg-slate-800 hover:bg-sky-600 text-slate-300 hover:text-white flex items-center justify-center transition shadow-sm"
               >
                 <Instagram className="w-4 h-4" />
               </a>
-              <span className="text-xs text-slate-400 font-medium">@2020oftalmologia</span>
+              <a
+                href={CLINIC_INFO.instagram}
+                target="_blank"
+                rel="noreferrer"
+                className="text-xs text-slate-300 hover:text-white font-medium transition"
+              >
+                @2020csvisual
+              </a>
             </div>
           </div>
 
@@ -191,7 +194,7 @@ export const Footer: React.FC<FooterProps> = ({
 
         {/* Bottom Bar */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
-          <p>© 2026 2020 Oftalmología. Todos los derechos reservados.</p>
+          <p>© 2026 2020 Centro de Salud Visual. Todos los derechos reservados.</p>
           <div className="flex items-center gap-4">
             <span>Bahía Blanca & Monte Hermoso</span>
             <span>·</span>

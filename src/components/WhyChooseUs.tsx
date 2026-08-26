@@ -8,7 +8,7 @@ interface WhyChooseUsProps {
 }
 
 export const WhyChooseUs: React.FC<WhyChooseUsProps> = ({ onOpenBooking, onOpenUrgencias }) => {
-  const [activeIndex, setActiveIndex] = useState<number>(0);
+  const [activeIndex, setActiveIndex] = useState<number | null>(0);
 
   return (
     <section id="por-que-elegirnos" className="py-16 sm:py-24 bg-white relative">
@@ -47,7 +47,7 @@ export const WhyChooseUs: React.FC<WhyChooseUsProps> = ({ onOpenBooking, onOpenU
                   }`}
                 >
                   <button
-                    onClick={() => setActiveIndex(idx)}
+                    onClick={() => setActiveIndex(isActive ? null : idx)}
                     className="w-full text-left p-5 sm:p-6 flex items-center justify-between gap-4 focus:outline-none"
                     aria-expanded={isActive}
                   >
@@ -130,7 +130,8 @@ export const WhyChooseUs: React.FC<WhyChooseUsProps> = ({ onOpenBooking, onOpenU
             <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-slate-200 aspect-[4/3] sm:aspect-[16/11] bg-slate-900 group">
               <img
                 src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=1200&q=80"
-                alt="Equipamiento oftalmológico de alta complejidad en 2020 Oftalmología Bahía Blanca"
+                alt="Equipamiento oftalmológico de alta complejidad en 2020 Centro de Salud Visual Bahía Blanca"
+                referrerPolicy="no-referrer"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent" />

@@ -159,7 +159,7 @@ export const VisionTestModal: React.FC<VisionTestModalProps> = ({
                     ? 'Tus síntomas coinciden con patrones de Ojo Seco moderado/severo o fatiga visual acentuada. Te sugerimos realizar un test de diagnóstico por imágenes (Meibografía HD / Film lagrimal) y control con un especialista.'
                     : score >= 3
                     ? 'Presentás signos incipientes de sequedad o cambio en tu graduación visual. Una consulta oftalmológica completa permitirá descartar afecciones corneales o presbicia.'
-                    : 'Tus ojos parecen estar en buen estado general. Recordá realizar tu examen de rutina y fondo de ojo anual preventivo en 2020 Oftalmología.'}
+                    : 'Tus ojos parecen estar en buen estado general. Recordá realizar tu examen de rutina y fondo de ojo anual preventivo en 2020 Centro de Salud Visual.'}
                 </p>
               </div>
 

@@ -18,7 +18,8 @@ export const Hero: React.FC<HeroProps> = ({
       <div className="absolute inset-0 z-0">
         <img
           src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=2000&q=85"
-          alt="2020 Oftalmología Bahía Blanca fachada e instalaciones"
+          alt="2020 Centro de Salud Visual Bahía Blanca fachada e instalaciones"
+          referrerPolicy="no-referrer"
           className="w-full h-full object-cover object-center transform scale-105"
         />
         {/* Multilayer gradient for optimal contrast */}
