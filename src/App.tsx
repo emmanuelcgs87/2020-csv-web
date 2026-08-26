@@ -6,6 +6,8 @@ import { HighlightFeatures } from './components/HighlightFeatures';
 import { SpecialtiesSection } from './components/SpecialtiesSection';
 import { WhyChooseUs } from './components/WhyChooseUs';
 import { TeamSection } from './components/TeamSection';
+import { TestimonialsSection } from './components/TestimonialsSection';
+import { BlogSection } from './components/BlogSection';
 import { CtaSection } from './components/CtaSection';
 import { LocationsSection } from './components/LocationsSection';
 import { Footer } from './components/Footer';
@@ -16,8 +18,9 @@ import { SpecialtyDetailModal } from './components/SpecialtyDetailModal';
 import { UrgenciasModal } from './components/UrgenciasModal';
 import { CoverageCheckerModal } from './components/CoverageCheckerModal';
 import { VisionTestModal } from './components/VisionTestModal';
+import { ArticleDetailModal } from './components/ArticleDetailModal';
 
-import { Doctor, ObraSocial } from './types';
+import { Doctor, ObraSocial, BlogPost } from './types';
 import { CLINIC_INFO } from './data/clinicData';
 import { MessageCircle, Phone, ArrowUp, Calendar, AlertCircle } from 'lucide-react';
 
@@ -34,6 +37,7 @@ export default function App() {
   const [coverageOpen, setCoverageOpen] = useState(false);
   const [selectedObraSocialForModal, setSelectedObraSocialForModal] = useState<ObraSocial | undefined>(undefined);
   const [visionTestOpen, setVisionTestOpen] = useState(false);
+  const [selectedArticleDetail, setSelectedArticleDetail] = useState<BlogPost | null>(null);
 
   const handleOpenBooking = (doctorName?: string, specialtyId?: string) => {
     setSelectedDoctorForBooking(doctorName);
@@ -101,6 +105,12 @@ export default function App() {
           onSelectDoctor={(doc) => setSelectedDoctorDetail(doc)}
           onBookWithDoctor={(docName) => handleOpenBooking(docName)}
         />
+
+        {/* Testimonios de Pacientes y Reseñas Verificadas */}
+        <TestimonialsSection onOpenBooking={handleOpenBooking} />
+
+        {/* Artículos y Consejos para la Salud Visual (Blog) */}
+        <BlogSection onSelectArticle={(art) => setSelectedArticleDetail(art)} />
 
         {/* Tu Turno: Da el primer paso hacia una visión más clara */}
         <CtaSection onOpenBooking={() => handleOpenBooking()} />
@@ -181,6 +191,12 @@ export default function App() {
         isOpen={visionTestOpen}
         onClose={() => setVisionTestOpen(false)}
         onOpenBooking={handleOpenBooking}
+      />
+
+      <ArticleDetailModal
+        article={selectedArticleDetail}
+        onClose={() => setSelectedArticleDetail(null)}
+        onOpenBooking={() => handleOpenBooking()}
       />
     </div>
   );

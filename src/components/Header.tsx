@@ -32,9 +32,9 @@ export const Header: React.FC<HeaderProps> = ({
   const navLinks = [
     { name: 'Especialidades', href: '#especialidades' },
     { name: 'Equipo', href: '#equipo' },
-    { name: 'Nosotros', href: '#por-que-elegirnos' },
+    { name: 'Testimonios', href: '#testimonios' },
+    { name: 'Artículos', href: '#articulos' },
     { name: 'Sedes', href: '#sedes' },
-    { name: 'Contacto', href: '#contacto' },
   ];
 
   return (
@@ -92,29 +92,33 @@ export const Header: React.FC<HeaderProps> = ({
             </button>
           </nav>
 
-          {/* Actions: Pedir Turno (Phone removed as requested) */}
+          {/* Actions: Pedir Turno */}
           <div className="hidden sm:flex items-center gap-3">
-            <button
-              onClick={() => onOpenBooking()}
+            <a
+              href={CLINIC_INFO.appointmentUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               id="header-cta-pedir-turno"
               className="flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-sky-600 to-blue-700 hover:from-sky-500 hover:to-blue-600 text-white font-medium text-sm rounded-full shadow-lg shadow-sky-600/30 hover:shadow-sky-500/40 transition-all transform hover:-translate-y-0.5 active:translate-y-0"
             >
               <Calendar className="w-4 h-4 text-sky-200" />
               <span>Pedir Turno</span>
               <ArrowRight className="w-4 h-4" />
-            </button>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
           <div className="flex items-center gap-2 lg:hidden">
-            <button
-              onClick={() => onOpenBooking()}
+            <a
+              href={CLINIC_INFO.appointmentUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               id="mobile-header-pedir-turno"
               className="px-3.5 py-1.5 bg-sky-600 text-white text-xs font-semibold rounded-full sm:hidden flex items-center gap-1"
             >
               <Calendar className="w-3.5 h-3.5" />
               Turno
-            </button>
+            </a>
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               id="mobile-menu-toggle"
@@ -169,17 +173,17 @@ export const Header: React.FC<HeaderProps> = ({
               Test Rápido de Síntomas & Ojo Seco
             </button>
 
-            <button
-              onClick={() => {
-                setMobileMenuOpen(false);
-                onOpenBooking();
-              }}
+            <a
+              href={CLINIC_INFO.appointmentUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setMobileMenuOpen(false)}
               className="w-full flex items-center justify-center gap-2 px-5 py-3 bg-gradient-to-r from-sky-600 to-blue-700 text-white font-semibold rounded-xl shadow-md text-sm"
             >
               <Calendar className="w-4 h-4" />
               Solicitar Turno Online
               <ArrowRight className="w-4 h-4" />
-            </button>
+            </a>
 
             <div className="flex items-center justify-between pt-2 px-2 text-xs text-slate-400">
               <span className="flex items-center gap-1">

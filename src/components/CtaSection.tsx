@@ -52,15 +52,17 @@ export const CtaSection: React.FC<CtaSectionProps> = ({ onOpenBooking }) => {
           </a>
 
           {/* Online Appointment Booking Button */}
-          <button
-            onClick={onOpenBooking}
+          <a
+            href={CLINIC_INFO.appointmentUrl}
+            target="_blank"
+            rel="noopener noreferrer"
             id="cta-online-booking-button"
             className="inline-flex items-center justify-center gap-2.5 px-8 py-4 bg-white hover:bg-slate-50 border border-slate-300 hover:border-slate-400 text-slate-800 font-bold text-base rounded-full shadow-md transition-all hover:shadow-lg transform hover:-translate-y-0.5"
           >
             <Calendar className="w-5 h-5 text-sky-600" />
             <span>Reservar Turno Online</span>
             <ArrowRight className="w-4 h-4 text-slate-400" />
-          </button>
+          </a>
 
         </div>
 

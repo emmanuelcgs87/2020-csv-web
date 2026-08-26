@@ -1,7 +1,7 @@
 import React from 'react';
-import { SPECIALTIES } from '../data/clinicData';
+import { SPECIALTIES, CLINIC_INFO } from '../data/clinicData';
 import { Specialty } from '../types';
-import { X, Calendar, CheckCircle2, Stethoscope, Sparkles, MapPin, AlertCircle, ArrowRight } from 'lucide-react';
+import { X, Calendar, CheckCircle2, Stethoscope, Sparkles, MapPin, AlertCircle, ArrowRight, ExternalLink } from 'lucide-react';
 
 interface SpecialtyDetailModalProps {
   specialtyId: string | null;
@@ -119,17 +119,16 @@ export const SpecialtyDetailModal: React.FC<SpecialtyDetailModalProps> = ({
             >
               Volver
             </button>
-            <button
-              onClick={() => {
-                onClose();
-                onOpenBooking(undefined, specialty.id);
-              }}
+            <a
+              href={CLINIC_INFO.appointmentUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3 bg-sky-600 hover:bg-sky-500 text-white font-bold text-xs sm:text-sm rounded-xl shadow-md transition"
             >
               <Calendar className="w-4 h-4" />
               <span>Solicitar Turno para {specialty.name}</span>
-              <ArrowRight className="w-4 h-4" />
-            </button>
+              <ExternalLink className="w-4 h-4" />
+            </a>
           </div>
 
         </div>

@@ -60,3 +60,40 @@ export interface AppointmentBooking {
   affiliateNumber: string;
   notes: string;
 }
+
+export interface Testimonial {
+  id: string;
+  name: string;
+  location: string;
+  treatment: string;
+  category: 'cirugias' | 'ojo-seco' | 'protesis' | 'urgencias' | 'general' | 'pediatria';
+  rating: number;
+  date: string;
+  comment: string;
+  doctorAttended?: string;
+  avatarInitials: string;
+  verified: boolean;
+}
+
+export interface BlogPost {
+  id: string;
+  title: string;
+  category: string;
+  date: string;
+  readTime: string;
+  image: string;
+  excerpt: string;
+  author: {
+    name: string;
+    role: string;
+    avatar?: string;
+  };
+  content: {
+    intro: string;
+    sections: {
+      heading: string;
+      body: string;
+    }[];
+    takeaways: string[];
+  };
+}

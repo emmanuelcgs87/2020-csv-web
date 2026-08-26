@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { DOCTORS, SPECIALTIES, BRANCHES, OBRAS_SOCIALES, CLINIC_INFO } from '../data/clinicData';
 import { AppointmentBooking } from '../types';
-import { X, Calendar, Clock, MapPin, User, Phone, Mail, Shield, CheckCircle2, MessageCircle, AlertCircle, ArrowRight, ArrowLeft } from 'lucide-react';
+import { X, Calendar, Clock, MapPin, User, Phone, Mail, Shield, CheckCircle2, MessageCircle, AlertCircle, ArrowRight, ArrowLeft, ExternalLink } from 'lucide-react';
 
 interface AppointmentModalProps {
   isOpen: boolean;
@@ -122,6 +122,34 @@ export const AppointmentModal: React.FC<AppointmentModalProps> = ({
 
         {/* Form Body */}
         <div className="p-6 sm:p-8">
+
+          {/* Direct link callout to https://turnos.revaicare.com/2020csv */}
+          {step < 4 && (
+            <div className="mb-6 p-4 rounded-2xl bg-sky-50 border border-sky-200 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 shadow-sm">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-xl bg-sky-600 text-white flex items-center justify-center shrink-0 shadow-sm">
+                  <Calendar className="w-5 h-5" />
+                </div>
+                <div>
+                  <h4 className="text-xs sm:text-sm font-bold text-slate-900">
+                    Portal de Turnos Online Oficial
+                  </h4>
+                  <p className="text-xs text-slate-600">
+                    Podés seleccionar médico, día y horario directamente en nuestra plataforma web.
+                  </p>
+                </div>
+              </div>
+              <a
+                href={CLINIC_INFO.appointmentUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-1.5 px-4 py-2 bg-sky-600 hover:bg-sky-700 text-white text-xs font-bold rounded-xl shrink-0 transition shadow-sm w-full sm:w-auto"
+              >
+                <span>Abrir turnos.revaicare.com</span>
+                <ExternalLink className="w-3.5 h-3.5" />
+              </a>
+            </div>
+          )}
           
           {/* STEP 1: Sede, Especialidad, Doctor */}
           {step === 1 && (

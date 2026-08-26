@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { WHY_CHOOSE_US_ITEMS } from '../data/clinicData';
+import { WHY_CHOOSE_US_ITEMS, CLINIC_INFO } from '../data/clinicData';
 import { MapPin, ChevronDown, Check, ShieldCheck, Sparkles, Clock, Calendar, ArrowRight } from 'lucide-react';
 
 interface WhyChooseUsProps {
@@ -109,13 +109,15 @@ export const WhyChooseUs: React.FC<WhyChooseUsProps> = ({ onOpenBooking, onOpenU
                             Ver protocolo de guardia y teléfono de urgencias →
                           </button>
                         ) : (
-                          <button
-                            onClick={onOpenBooking}
+                          <a
+                            href={CLINIC_INFO.appointmentUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className="inline-flex items-center gap-1.5 text-xs font-bold text-sky-600 hover:text-sky-700 underline"
                           >
                             <Calendar className="w-3.5 h-3.5" />
                             Agendar consulta con nuestros especialistas →
-                          </button>
+                          </a>
                         )}
                       </div>
                     </div>

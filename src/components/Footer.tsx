@@ -131,6 +131,16 @@ export const Footer: React.FC<FooterProps> = ({
                 </a>
               </li>
               <li>
+                <a href="#testimonios" className="hover:text-white transition text-slate-300">
+                  Testimonios
+                </a>
+              </li>
+              <li>
+                <a href="#articulos" className="hover:text-white transition text-slate-300">
+                  Artículos & Blog
+                </a>
+              </li>
+              <li>
                 <a href="#por-que-elegirnos" className="hover:text-white transition text-slate-300">
                   Tecnología
                 </a>
@@ -152,12 +162,14 @@ export const Footer: React.FC<FooterProps> = ({
                 </button>
               </li>
               <li>
-                <button
-                  onClick={onOpenBooking}
-                  className="hover:text-white transition text-slate-300 text-left"
+                <a
+                  href={CLINIC_INFO.appointmentUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-white transition text-slate-300 text-left block"
                 >
-                  Portal de Turnos
-                </button>
+                  Portal de Turnos Online
+                </a>
               </li>
             </ul>
           </div>

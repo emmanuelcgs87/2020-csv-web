@@ -1,7 +1,7 @@
 import React from 'react';
-import { DOCTORS } from '../data/clinicData';
+import { DOCTORS, CLINIC_INFO } from '../data/clinicData';
 import { Doctor } from '../types';
-import { User, Calendar, Award, ArrowRight, Stethoscope, ChevronRight } from 'lucide-react';
+import { User, Calendar, Award, ArrowRight, Stethoscope, ChevronRight, ExternalLink } from 'lucide-react';
 
 interface TeamSectionProps {
   onSelectDoctor: (doctor: Doctor) => void;
@@ -97,13 +97,15 @@ export const TeamSection: React.FC<TeamSectionProps> = ({ onSelectDoctor, onBook
                   >
                     Ver Perfil
                   </button>
-                  <button
-                    onClick={() => onBookWithDoctor(doctor.name)}
+                  <a
+                    href={CLINIC_INFO.appointmentUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="flex-1 text-xs font-semibold bg-sky-50 hover:bg-sky-600 text-sky-700 hover:text-white py-2 px-3 rounded-xl transition-all shadow-sm flex items-center justify-center gap-1"
                   >
                     <Calendar className="w-3.5 h-3.5" />
                     <span>Pedir Turno</span>
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>

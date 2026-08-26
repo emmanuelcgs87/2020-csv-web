@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { X, Eye, CheckCircle2, AlertCircle, Sparkles, RefreshCw, Calendar, ArrowRight } from 'lucide-react';
+import { X, Eye, CheckCircle2, AlertCircle, Sparkles, RefreshCw, Calendar, ArrowRight, ExternalLink } from 'lucide-react';
+import { CLINIC_INFO } from '../data/clinicData';
 
 interface VisionTestModalProps {
   isOpen: boolean;
@@ -191,18 +192,16 @@ export const VisionTestModal: React.FC<VisionTestModalProps> = ({
                   Rehacer test
                 </button>
 
-                <button
-                  type="button"
-                  onClick={() => {
-                    onClose();
-                    onOpenBooking(undefined, score >= 4 ? 'ojo-seco' : 'oftalmologia-general');
-                  }}
+                <a
+                  href={CLINIC_INFO.appointmentUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-6 py-3 bg-sky-600 hover:bg-sky-500 text-white font-bold text-xs sm:text-sm rounded-xl shadow transition"
                 >
                   <Calendar className="w-4 h-4" />
-                  <span>Agendar Consulta Ahora</span>
-                  <ArrowRight className="w-4 h-4" />
-                </button>
+                  <span>Agendar Consulta Online</span>
+                  <ExternalLink className="w-4 h-4" />
+                </a>
               </div>
             </div>
           )}

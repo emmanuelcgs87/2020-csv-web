@@ -1,5 +1,6 @@
 import React from 'react';
 import { MapPin, ArrowRight, CheckCircle2, ShieldCheck, Sparkles, UserCheck, Stethoscope } from 'lucide-react';
+import { CLINIC_INFO } from '../data/clinicData';
 
 interface HeroProps {
   onOpenBooking: () => void;
@@ -57,14 +58,16 @@ export const Hero: React.FC<HeroProps> = ({
 
             {/* CTA Action Buttons */}
             <div className="flex flex-wrap items-center gap-3.5 sm:gap-4 pt-2">
-              <button
-                onClick={onOpenBooking}
+              <a
+                href={CLINIC_INFO.appointmentUrl}
+                target="_blank"
+                rel="noopener noreferrer"
                 id="hero-cta-solicitar-turno"
                 className="group inline-flex items-center justify-center gap-2.5 px-6 sm:px-8 py-3.5 sm:py-4 bg-sky-600 hover:bg-sky-500 text-white font-semibold text-sm sm:text-base rounded-full shadow-xl shadow-sky-600/30 hover:shadow-sky-500/50 transition-all transform hover:-translate-y-0.5 active:translate-y-0"
               >
                 <span>Solicitar Turno</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </button>
+              </a>
 
               <button
                 onClick={onScrollToSpecialties}
@@ -111,12 +114,14 @@ export const Hero: React.FC<HeroProps> = ({
                 <span className="flex items-center gap-1 text-sky-300 font-medium">
                   <Stethoscope className="w-3.5 h-3.5" /> Turnos disponibles
                 </span>
-                <button
-                  onClick={onOpenBooking}
+                <a
+                  href={CLINIC_INFO.appointmentUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-white hover:text-sky-300 font-semibold underline underline-offset-2 transition"
                 >
                   Agendar hoy →
-                </button>
+                </a>
               </div>
             </div>
 

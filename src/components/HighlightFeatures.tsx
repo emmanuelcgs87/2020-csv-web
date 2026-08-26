@@ -1,6 +1,7 @@
 import React from 'react';
-import { Eye, Droplets, Shield, ArrowRight, Sparkles, CheckCircle2, Activity } from 'lucide-react';
+import { Eye, Droplets, Shield, ArrowRight, Sparkles, CheckCircle2, Activity, ExternalLink } from 'lucide-react';
 import { Specialty } from '../types';
+import { CLINIC_INFO } from '../data/clinicData';
 
 interface HighlightFeaturesProps {
   onSelectSpecialty: (specialtyId: string) => void;
@@ -86,12 +87,15 @@ export const HighlightFeatures: React.FC<HighlightFeaturesProps> = ({
                 <span>Conocer tratamiento y estudios</span>
                 <ArrowRight className="w-4 h-4" />
               </button>
-              <button
-                onClick={() => onOpenBooking(undefined, 'ojo-seco')}
-                className="text-xs bg-sky-50 hover:bg-sky-100 text-sky-700 font-semibold px-3 py-1.5 rounded-lg transition"
+              <a
+                href={CLINIC_INFO.appointmentUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xs bg-sky-50 hover:bg-sky-100 text-sky-700 font-semibold px-3 py-1.5 rounded-lg transition inline-flex items-center gap-1"
               >
-                Pedir Turno
-              </button>
+                <span>Pedir Turno</span>
+                <ExternalLink className="w-3 h-3" />
+              </a>
             </div>
           </div>
 
@@ -144,12 +148,15 @@ export const HighlightFeatures: React.FC<HighlightFeaturesProps> = ({
                 <span>Conocer más</span>
                 <ArrowRight className="w-4 h-4" />
               </button>
-              <button
-                onClick={() => onOpenBooking(undefined, 'protesis-oculares')}
-                className="text-xs bg-indigo-50 hover:bg-indigo-100 text-indigo-700 font-semibold px-3 py-1.5 rounded-lg transition"
+              <a
+                href={CLINIC_INFO.appointmentUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xs bg-indigo-50 hover:bg-indigo-100 text-indigo-700 font-semibold px-3 py-1.5 rounded-lg transition inline-flex items-center gap-1"
               >
-                Consultar
-              </button>
+                <span>Consultar</span>
+                <ExternalLink className="w-3 h-3" />
+              </a>
             </div>
           </div>
 

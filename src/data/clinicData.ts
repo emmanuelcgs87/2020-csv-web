@@ -11,6 +11,7 @@ export const CLINIC_INFO = {
   email: "turnos@2020oftalmologia.com.ar",
   emergencyPhone: "(0291) 154-073618",
   instagram: "https://www.instagram.com/2020csvisual/",
+  appointmentUrl: "https://turnos.revaicare.com/2020csv",
   hoursWeekdays: "Lunes a Viernes: 8:00 a 20:00 hs",
   hoursSaturday: "Sábados: 10:00 a 14:00 hs",
   guardia24: "Guardia activa y pasiva 24 horas",

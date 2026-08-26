@@ -126,12 +126,14 @@ export const LocationsSection: React.FC<LocationsSectionProps> = ({ onOpenUrgenc
                 <ExternalLink className="w-3.5 h-3.5 text-slate-400" />
               </a>
 
-              <button
-                onClick={onOpenBooking}
+              <a
+                href={CLINIC_INFO.appointmentUrl}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-5 py-2.5 bg-sky-600 hover:bg-sky-500 text-white rounded-xl text-xs sm:text-sm font-semibold shadow transition"
               >
                 <span>Pedir Turno en esta sede</span>
-              </button>
+              </a>
             </div>
           </div>
 

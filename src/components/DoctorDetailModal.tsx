@@ -1,6 +1,7 @@
 import React from 'react';
 import { Doctor } from '../types';
-import { X, Calendar, MapPin, Award, BookOpen, Clock, CheckCircle2, Stethoscope, ArrowRight } from 'lucide-react';
+import { CLINIC_INFO } from '../data/clinicData';
+import { X, Calendar, MapPin, Award, BookOpen, Clock, CheckCircle2, Stethoscope, ArrowRight, ExternalLink } from 'lucide-react';
 
 interface DoctorDetailModalProps {
   doctor: Doctor | null;
@@ -115,17 +116,16 @@ export const DoctorDetailModal: React.FC<DoctorDetailModalProps> = ({
             >
               Cerrar
             </button>
-            <button
-              onClick={() => {
-                onClose();
-                onBookWithDoctor(doctor.name);
-              }}
+            <a
+              href={CLINIC_INFO.appointmentUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3 bg-sky-600 hover:bg-sky-500 text-white font-bold text-xs sm:text-sm rounded-xl shadow-md transition"
             >
               <Calendar className="w-4 h-4" />
               <span>Solicitar Turno con {doctor.name.split(' ')[1] || doctor.name}</span>
-              <ArrowRight className="w-4 h-4" />
-            </button>
+              <ExternalLink className="w-4 h-4" />
+            </a>
           </div>
 
         </div>

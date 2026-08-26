@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { OBRAS_SOCIALES } from '../data/clinicData';
+import { OBRAS_SOCIALES, CLINIC_INFO } from '../data/clinicData';
 import { ObraSocial } from '../types';
-import { X, Search, ShieldCheck, Check, AlertCircle, FileText, Calendar } from 'lucide-react';
+import { X, Search, ShieldCheck, Check, AlertCircle, FileText, Calendar, ExternalLink } from 'lucide-react';
 
 interface CoverageCheckerModalProps {
   isOpen: boolean;
@@ -147,16 +147,16 @@ export const CoverageCheckerModal: React.FC<CoverageCheckerModalProps> = ({
             >
               Cerrar
             </button>
-            <button
-              onClick={() => {
-                onClose();
-                onOpenBooking();
-              }}
+            <a
+              href={CLINIC_INFO.appointmentUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3 bg-sky-600 hover:bg-sky-500 text-white font-bold text-xs sm:text-sm rounded-xl shadow transition"
             >
               <Calendar className="w-4 h-4" />
               <span>Solicitar Turno con mi Obra Social</span>
-            </button>
+              <ExternalLink className="w-3.5 h-3.5" />
+            </a>
           </div>
 
         </div>
