@@ -1,0 +1,6 @@
+{
+  "name": "2020 Oftalmología",
+  "description": "Sitio web oficial y portal de turnos para 2020 Oftalmología: clínica especializada en salud visual, diagnóstico por imágenes y cirugías en Bahía Blanca y Monte Hermoso.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
